@@ -5,6 +5,9 @@ resource "aws_vpc_security_group_ingress_rule" "allow_https" {
   cidr_ipv4         = var.sg_ipv4_cidr
   from_port         = var.sg_https_ports
   to_port           = var.sg_https_ports
+  tags = {
+    Name = "allow-https-ingress from DEV VPC",
+  }
 }
 
 # Below ingress allows APIs access from DEV VPC
@@ -14,6 +17,9 @@ resource "aws_vpc_security_group_ingress_rule" "api_access_dev" {
   cidr_ipv4         = var.sg_ipv4_cidr
   from_port         = var.sg_api_ports_dev
   to_port           = var.sg_api_ports_dev
+  tags = {
+    Name = "allow-api-ingress from DEV VPC",
+  }
 }
 
 locals {
@@ -26,6 +32,9 @@ resource "aws_vpc_security_group_ingress_rule" "api_access_public" {
   cidr_ipv4         = local.aws_eip
   from_port         = var.sg_api_ports_public
   to_port           = var.sg_api_ports_public
+  tags = {
+    Name = "allow-api-ingress from Prod App Public IP",
+  }
 }
 
 resource "aws_vpc_security_group_egress_rule" "splunk" {
@@ -34,4 +43,7 @@ resource "aws_vpc_security_group_egress_rule" "splunk" {
   cidr_ipv4         = var.splunk_ipv4_cidr
   from_port         = var.splunk
   to_port           = var.splunk
+  tags = {
+    Name = "allow-splunk-egress",
+  }
 }
