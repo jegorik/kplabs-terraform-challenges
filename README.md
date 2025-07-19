@@ -17,17 +17,19 @@ Before starting these challenges, ensure you have:
 - **Basic Knowledge**: Understanding of AWS services and Infrastructure as Code concepts
 
 ### AWS CLI Configuration
+
 ```bash
 aws configure
 # Enter your AWS Access Key ID, Secret Access Key, and preferred region
 ```
 
 ### Terraform Installation
+
 Visit [Terraform Downloads](https://www.terraform.io/downloads.html) for installation instructions.
 
 ## 📁 Repository Structure
 
-```
+```text
 kplabs-terraform-challenges/
 ├── challenge-1/          # AWS EIP (Elastic IP) basics
 ├── challenge-2/          # Security Groups with dependencies
@@ -39,18 +41,22 @@ kplabs-terraform-challenges/
 ## 🎯 Challenges
 
 ### Challenge 1: AWS Elastic IP (EIP)
+
 **📍 Directory:** `challenge-1/`  
 **🎯 Learning Objectives:**
+
 - Create your first AWS resource with Terraform
 - Understand basic Terraform syntax and structure
 - Learn about AWS Elastic IP addresses
 
 **📋 What you'll build:**
+
 - AWS Elastic IP in a VPC
 - Basic provider configuration
 - Variable usage for AWS region
 
 **🔧 Key Concepts:**
+
 - Resource blocks
 - Provider configuration
 - Variables and defaults
@@ -58,18 +64,22 @@ kplabs-terraform-challenges/
 ---
 
 ### Challenge 2: Security Groups with Dependencies
+
 **📍 Directory:** `challenge-2/`  
 **🎯 Learning Objectives:**
+
 - Understand Terraform resource dependencies
 - Work with AWS Security Groups
 - Learn dependency management with `depends_on`
 
 **📋 What you'll build:**
+
 - AWS Security Group for a payment application
 - Security group rules
 - Resource dependencies between EIP and Security Group
 
 **🔧 Key Concepts:**
+
 - Resource dependencies (`depends_on`)
 - AWS Security Groups
 - Resource tagging
@@ -77,18 +87,22 @@ kplabs-terraform-challenges/
 ---
 
 ### Challenge 3: EC2 Instances with For-Each
+
 **📍 Directory:** `challenge-3/`  
 **🎯 Learning Objectives:**
+
 - Master Terraform loops using `for_each`
 - Create multiple resources dynamically
 - Work with complex variable types (maps)
 
 **📋 What you'll build:**
+
 - Multiple EC2 instances using `for_each`
 - Dynamic resource naming
 - Map-based variable configuration
 
 **🔧 Key Concepts:**
+
 - `for_each` meta-argument
 - Map variables
 - Dynamic resource creation
@@ -97,18 +111,22 @@ kplabs-terraform-challenges/
 ---
 
 ### Challenge 4: IAM with Data Sources
+
 **📍 Directory:** `challenge-4/`  
 **🎯 Learning Objectives:**
+
 - Use Terraform data sources
 - Work with AWS IAM resources
 - Understand data source vs resource differences
 
 **📋 What you'll build:**
+
 - IAM user with dynamic naming
 - Data sources for AWS caller identity
 - IAM users data source
 
 **🔧 Key Concepts:**
+
 - Data sources (`data` blocks)
 - AWS IAM resources
 - Dynamic resource naming with data
@@ -119,17 +137,20 @@ kplabs-terraform-challenges/
 ### Step-by-Step Instructions
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/jegorik/kplabs-terraform-challenges.git
    cd kplabs-terraform-challenges
    ```
 
 2. **Navigate to a challenge directory:**
+
    ```bash
    cd challenge-1
    ```
 
 3. **Initialize Terraform:**
+
    ```bash
    terraform init
    ```
@@ -140,16 +161,19 @@ kplabs-terraform-challenges/
    - `*.tf` - Resource definitions
 
 5. **Plan your deployment:**
+
    ```bash
    terraform plan
    ```
 
 6. **Apply the configuration:**
+
    ```bash
    terraform apply
    ```
 
 7. **Clean up resources:**
+
    ```bash
    terraform destroy
    ```
@@ -183,6 +207,7 @@ Feel free to contribute improvements, additional challenges, or documentation en
 ## 📞 Support
 
 If you encounter issues:
+
 1. Check AWS credentials and permissions
 2. Verify Terraform installation
 3. Review AWS service limits in your account
